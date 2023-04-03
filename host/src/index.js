@@ -1,10 +1,11 @@
 import printMe from './print.js';
+import _ from 'lodash'
 
 function component() {
   const div = document.createElement('div')
   const btn = document.createElement('button');
 
-  btn.innerHTML = 'Click me and check the console';
+  btn.innerHTML = _.join(['Hi', 'index'], ' ');
   btn.onclick = printMe
 
   div.appendChild(btn)

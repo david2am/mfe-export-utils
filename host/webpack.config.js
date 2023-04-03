@@ -10,7 +10,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: '/'
+    // publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -19,6 +19,9 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   optimization: {
-    runtimeChunk: 'single'
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all'
+    }
   }
 }
