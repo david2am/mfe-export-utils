@@ -17,5 +17,11 @@ module.exports = {
     })
   ],
   devtool: 'inline-source-map',
-  mode: 'development'
+  mode: 'development',
+  devServer: {
+    static: './dist'
+  },
+  optimization: {
+    runtimeChunk: 'single'
+  }
 }

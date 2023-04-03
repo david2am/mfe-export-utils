@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Simple Webpack host",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack serve --open"
   },
   "private": true,
   "keywords": [],
@@ -12,6 +14,7 @@
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.77.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
   }
 }
