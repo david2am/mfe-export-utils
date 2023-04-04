@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = {
   output: {
-    filename: '[name].bundle[contenthash].js',
+    filename: '[name].bundle.[contenthash].js',
     clean: true
   },
 
@@ -15,7 +15,6 @@ module.exports = {
     new ModuleFederationPlugin({
         name: "remote",
         filename: "remoteEntry.js",
-        remotes: {},
         exposes: {
             "./add": "./src/utils/add.js",
         }
@@ -24,13 +23,4 @@ module.exports = {
         title: "Remote",
     }),
   ],
-
-  devtool: 'inline-source-map',
-
-  optimization: {
-    // runtimeChunk: 'single',
-    splitChunks: {
-      chunks: 'all'
-    }
-  }
 };

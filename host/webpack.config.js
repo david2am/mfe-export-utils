@@ -19,7 +19,7 @@ module.exports = {
         name: "host",
         filename: "remoteEntry.js",
         remotes: {
-            remote: `remote@${remoteUrl}/remoteEntry.js`,
+            remote: `remote@${remoteURL}/remoteEntry.js`,
         },
     }),
     new HtmlWebPackPlugin({
